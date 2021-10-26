@@ -17,9 +17,9 @@ function App() {
   
 
   return (
-    <div className="App">
-    <div className="flex justify-center items-center h-screen">
-        <div className="px-20 flex gap-y-2 flex-col md:mt-10">
+    <div className="App md:container md:mx-auto md:px-4 px-3">
+    <div className="flex justify-center items-center">
+        <div className="flex gap-y-2 flex-col mt-10 mb-10 md:w-auto w-full">
           <Caller phrases={phrases} />
           <BingoCard card={card} phrases={phrases} onSelect={setCard}/>
         </div>

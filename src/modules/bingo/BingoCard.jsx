@@ -13,11 +13,10 @@ const BingoCard = ({ card, phrases, onSelect }) => {
   const bingos = cacluateBingos(card);
   
   return <div>
-    <canvas id="confetti" className="absolute -inset-px"></canvas>
-    <div id="bingo-card" className="bg-white flex flex-col rounded-xl shadow-md">
+    <div id="bingo-card" className="bg-white flex flex-col rounded-xl shadow-md overflow-auto md:overflow-visible">
     {
       card.map((row, rowIdx) => 
-         <div key={rowIdx} className="flex">
+         <div key={rowIdx} className="flex md:justify-center">
             {row.map((block, blockIdx) =>
                <PhraseBlock
                 key={block.id}
